@@ -25,10 +25,19 @@ function MarkupColumn() {
       //     </pre>
       //   )
       // }
-      if (input.tag) {
+      if (input.type === "code") {
         return (
-          acc + "[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n"
+          acc + ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n")
         )
+      }
+      if (input.tag) {
+        let raw = ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n"
+        );
+
+        // let cleaned = raw.replace(/\s+/g, ' ').trim();
+
+        return (
+          acc + raw + '\n')
       }
       return (
         acc + (input.value || `\u00A0`) + "\n"
@@ -38,6 +47,8 @@ function MarkupColumn() {
     }, "");
 
     code += "\n[i]Сделано с помощью SteamEditor![/i]\n";
+
+
 
     try {
       await navigator.clipboard.writeText(code);
