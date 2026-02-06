@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import style from './MarkupColumn.module.scss';
+
 function MarkupColumn() {
   const inputs = useSelector((state) => state.inputs.items);
 
@@ -46,6 +48,13 @@ function MarkupColumn() {
               </div>
             )
           }
+          if (input.type === "code") {
+            return (
+              <pre className={style.pre} key={input.id}>
+                [{input.tag}]{input.value}[/{input.tag}]
+              </pre>
+            )
+          }
           if (input.tag) {
             return (
               <div key={input.id}>
@@ -67,3 +76,4 @@ function MarkupColumn() {
 }
 
 export default MarkupColumn;
+

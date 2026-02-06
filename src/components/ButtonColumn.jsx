@@ -50,10 +50,6 @@ function ButtonColumn() {
         <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "hr", className: "steam__separator", tag: "hr" })}>[separator]</ButtonType></div>
       </div>
-
-      <div className={style['btns-block']}>
-         <ButtonType className={style['button']} onClick={() => handleAddInput({ type: "list-start", className: "steam__code", tag: "code" })}>[code]</ButtonType>
-      </div>
     </div>
   );
 }

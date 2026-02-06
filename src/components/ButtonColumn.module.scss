@@ -5,6 +5,26 @@
     border-radius: 8px;
     padding: 20px;
 
+    // flex: 1 1 0;
+    // /* или просто flex: 1; */
+    // min-width: 0;
+    // /* важно для flex, иначе не сжимается [web:8] */
+    // overflow-wrap: break-word;
+    // /* или overflow-wrap: anywhere; [web:8][web:12] */
+    // /* word-break: break-all;  — более жёсткий вариант, если нужно ломать где угодно [web:8] */
+
+    // flex: 0 0 (100% / 4);
+    // flex: 0 0 (100% / 4);
+    // flex: 0 0 ((100% - 60px) / 4);
+    flex: 0 0 calc((100% - 60px) / 4);
+
+    /* 4 равные колонки [web:21][web:24] */
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    /* переносить длинное слово [web:12] */
+    word-break: break-word;
+    /* на всякий случай для старых браузеров [web:12] */
+
     h2 {
         margin-bottom: 16px;
         font-size: 18px;

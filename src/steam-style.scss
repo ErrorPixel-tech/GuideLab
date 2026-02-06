@@ -67,6 +67,13 @@
     overflow-x: auto;
     line-height: 20px;
     color: #969696;
+    white-space: pre-wrap;
+    /* сохраняет переводы строк, но позволяет переносить */
+    word-wrap: break-word;
+    /* старый синоним, на всякий случай */
+    overflow-wrap: anywhere;
+    /* агрессивные переносы длинных слов/URL */
+
 }
 
 .steam__screenshot {

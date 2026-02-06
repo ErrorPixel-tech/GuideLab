@@ -24,6 +24,17 @@ body {
   border-radius: 8px;
   padding: 20px;
   // height: 36px;
+  // flex: 0 0 (100% / 4);
+  // flex: 0 0 ((100% - 60px) / 4);
+  flex: 0 0 calc((100% - 60px) / 4);
+
+  /* 4 равные колонки [web:21][web:24] */
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  /* переносить длинное слово [web:12] */
+  word-break: break-word;
+  /* на всякий случай для старых браузеров [web:12] */
+
 
   .header {
     display: flex;

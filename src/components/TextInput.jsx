@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { updateInput, removeInput } from '../features/inputs/inputs';
 import style from './TextInput.module.scss';
+import TextareaAutosize from 'react-textarea-autosize';
 
 function TextInput({ id, value, key, ref, onKeyDown }) {
   const dispatch = useDispatch();
@@ -17,7 +18,9 @@ function TextInput({ id, value, key, ref, onKeyDown }) {
 
   return (
     <div className={style.container}>
-      <input
+      <TextareaAutosize
+        minRows={1}
+        maxRows={5}
         key={key}
         ref={ref}
         onKeyDown={onKeyDown}
@@ -27,7 +30,7 @@ function TextInput({ id, value, key, ref, onKeyDown }) {
         value={value}
         onChange={handleChange}
         placeholder="Введите текст..."
-      ></input>
+      ></TextareaAutosize>
       <button onClick={handleDelete}>x</button>
     </div>
   );

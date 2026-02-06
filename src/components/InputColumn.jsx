@@ -9,7 +9,7 @@ function InputColumn() {
   const inputsRef = useRef([]);
 
   const handleKeyDown = (index) => (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && e.shiftKey) {
       e.preventDefault(); // чтобы форма не сабмитилась
       const next = inputsRef.current[index + 1]; // следующий инпут
       if (next) next.focus(); // если есть — фокусим

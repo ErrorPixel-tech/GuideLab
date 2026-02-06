@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import '../steam-style.scss';
+// import style from './PreviewColumn.module.scss';
 
 function PreviewColumn() {
   const inputs = useSelector((state) => state.inputs.items);
@@ -37,6 +38,14 @@ function PreviewColumn() {
                   <span>Картинка</span>
                 </div>
               </div>
+            )
+          }
+          if (input.type === "code") {
+            return (
+              // <pre className={style.pre} key={input.id} className={input.className}>
+              <pre key={input.id} className={input.className}>
+                {input.value || `\u00A0`}
+              </pre>
             )
           }
           return (
