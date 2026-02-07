@@ -96,3 +96,11 @@ body {
     border: 1px solid #eee;
   }
 }
+
+
+// Мобила (примерно до 768px)
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+}
