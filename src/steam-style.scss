@@ -1,3 +1,23 @@
+.steam__underline,
+.steam__bold,
+.steam__italic,
+.steam__pullquote,
+.steam__strike,
+.steam__spoiler,
+.steam__noparse {
+    margin-bottom: 16px;
+}
+
+.steam__list {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+.steam__olist {
+    margin-left: 30px;
+    margin-bottom: 16px;
+}
+
 .steam__paragraph {
     font-family: Arial, Helvetica, Verdana, sans-serif;
     font-size: 13px;
@@ -16,6 +36,7 @@
     color: rgb(150, 150, 150);
     word-wrap: break-word;
     color: var(--darkreader-text-969696, #a69e92);
+
 }
 
 .steam__text {
@@ -88,6 +109,53 @@ $img-text: rgb(166, 158, 146);
 $img-bg: rgb(52, 56, 58);
 $img-bord: rgb(84, 91, 94);
 
+
+.steam__paragraph__image {
+    display: block;
+
+    // clear: both;
+    span {
+        display: block;
+        float: left;
+        width: 50%;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // padding: 3px;
+        padding-right: 6px;
+        background-clip: content-box;
+        margin: 1px 0;
+        background-color: $img-bg;
+        color: $img-text;
+        border-color: $img-bord;
+    }
+
+    .footer {
+        clear: both;
+    }
+
+    margin-bottom: 16px;
+    font-family: Arial,
+    Helvetica,
+    Verdana,
+    sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(150, 150, 150);
+    word-wrap: break-word;
+    color: var(--darkreader-text-969696, #a69e92);
+    // margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.steam__paragraph__image--right {
+    span {
+        float: right;
+    }
+}
+
+
 .steam__screenshot {
     // margin: 6px 0;
     display: block;
@@ -106,6 +174,8 @@ $img-bord: rgb(84, 91, 94);
     background-color: $img-bg;
     color: $img-text;
     border-color: $img-bord;
+    padding: 3px;
+    border: 1px solid grey;
 }
 
 .steam__pullquote {
@@ -227,7 +297,7 @@ $img-bord: rgb(84, 91, 94);
     font-weight: 400;
     word-wrap: break-word;
     // background-color: #262626;
-    
+
     // background-color: var(--darkreader-background-262626, #1d1f20);
     // border-top-color: var(--darkreader-border-4d4b49, #736b5f);
     // border-right-color: var(--darkreader-border-4d4b49, #736b5f);

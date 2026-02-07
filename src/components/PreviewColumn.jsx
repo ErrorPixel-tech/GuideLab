@@ -36,6 +36,28 @@ function PreviewColumn() {
               </div>
             )
           }
+          if (input.type === "p-img") {
+            return (
+              <div key={input.id} className={input.className}>
+                <span>Картинка</span>
+                <pre key={input.id} className={input.className + " pre"}>
+                  {input.value || `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus maxime qui repellendus voluptate est reprehenderit vel et.`}
+                </pre>
+                <div className='footer'></div>
+              </div>
+            )
+          }
+          if (input.type === "p-img-r") {
+            return (
+              <div key={input.id} className={input.className}>
+                <span>Картинка</span>
+                <pre key={input.id} className={input.className + " pre"}>
+                  {input.value || `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus maxime qui repellendus voluptate est reprehenderit vel et.`}
+                </pre>
+                <div className='footer'></div>
+              </div>
+            )
+          }
           if (input.type === "screenshot") {
             return (
               <div key={input.id} className={input.className}>
@@ -85,6 +107,48 @@ function PreviewColumn() {
               </pre>
             )
           }
+          if (input.tag === "list") {
+
+            if (!input.value.trim()) {
+              return (
+                <ul className={input.className}>
+                  <li key={1}>Lorem ipsum dolor sit amet.</li>
+                  <li key={2}>Lorem ipsum dolor sit amet.</li>
+                  <li key={3}>Lorem ipsum dolor sit amet.</li>
+                </ul>
+              )
+            }
+            const arr = input.value.split(/\r?\n/);
+            return (
+              <ul className={input.className}>
+                {arr.map((str, index) => {
+                  return <li key={index}>{str}</li>
+                })}
+              </ul>
+            )
+          }
+          if (input.tag === "olist") {
+
+            if (!input.value.trim()) {
+              return (
+                <ol className={input.className}>
+                  <li key={1}>Lorem ipsum dolor sit amet.</li>
+                  <li key={2}>Lorem ipsum dolor sit amet.</li>
+                  <li key={3}>Lorem ipsum dolor sit amet.</li>
+                </ol>
+              )
+            }
+            const arr = input.value.split(/\r?\n/);
+            return (
+              <ol className={input.className}>
+                {arr.map((str, index) => {
+                  return <li key={index}>{str}</li>
+                })}
+              </ol>
+            )
+          }
+
+
           if (input.tag) {
             return (
               <pre key={input.id} className={input.className + " pre"}>
