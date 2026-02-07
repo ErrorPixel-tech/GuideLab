@@ -44,7 +44,7 @@ function InputColumn() {
       <div className={style.list}>
         {blocks.map((block, index) => {
           if (block.type === "listBlock") {
-            let list = block.listItems;
+            let list = block.items;
             let listId = block.id;
             console.log(list);
             let jsx = list.map((item, index) => {
