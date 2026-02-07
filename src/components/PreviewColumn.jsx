@@ -9,7 +9,7 @@ function PreviewColumn() {
   const inputs = useSelector((state) => state.inputs.items);
 
   function handleFormatClick(event) {
-    if (!confirm("Вы уверены? Данная опция удалит все лишние пробелы и все переносы строк в блоках. Форматирование не затронет текст в [code]. Мы вас предупреждали.")){return}
+    if (!confirm("Вы уверены? Данная опция удалит все лишние пробелы и все переносы строк в блоках. Форматирование не затронет текст в [code]. Мы вас предупреждали.")) { return }
     dispatch(formatAllInputs());
     event.target.textContent = 'Отформатировано!';
     // через 5 секунд вернуть назад
@@ -73,12 +73,27 @@ function PreviewColumn() {
             return (
               // <pre className={style.pre} key={input.id} className={input.className}>
               <pre key={input.id} className={input.className}>
-                {input.value || `\u00A0`}
+                {/* {input.value || `\u00A0`} */}
+                {input.value || `Введите текст`}
+              </pre>
+            )
+          }
+          if (input.tag === "p") {
+            return (
+              <pre key={input.id} className={input.className + " pre"}>
+                {input.value || `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus maxime qui repellendus voluptate est reprehenderit vel et.`}
+              </pre>
+            )
+          }
+          if (input.tag) {
+            return (
+              <pre key={input.id} className={input.className + " pre"}>
+                {input.value || `Введите текст`}
               </pre>
             )
           }
           return (
-            <pre key={input.id} className={input.className  + " pre"}>
+            <pre key={input.id} className={input.className + " pre"}>
               {input.value || `\u00A0`}
             </pre>
           )
