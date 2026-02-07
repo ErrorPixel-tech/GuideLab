@@ -34,7 +34,7 @@ const blocksSlice = createSlice(
             removeBlock(state, action) {
                 state.items = state.items.filter((item) => item.id !== action.payload.id);
             },
-            moveInputDown(state, action) {
+            moveBlockDown(state, action) {
                 const index = action.payload.index;
                 let newIndex = index + 1;
                 if (newIndex >= state.items.length) { return; }
@@ -42,7 +42,7 @@ const blocksSlice = createSlice(
                 state.items[index] = state.items[newIndex];
                 state.items[newIndex] = holder;
             },
-            moveInputUp(state, action) {
+            moveBlockUp(state, action) {
                 const index = action.payload.index;
                 let newIndex = index - 1;
                 if (newIndex < 0) { return; }
@@ -57,6 +57,6 @@ const blocksSlice = createSlice(
     }
 );
 
-export const { addList, moveInputUp, moveInputDown, addInput, updateInput, removeBlock, removeAllBlocks, formatAllBlocks } = blocksSlice.actions;
+export const { addList, moveBlockUp, moveBlockDown, addInput, updateInput, removeBlock, removeAllBlocks, formatAllBlocks } = blocksSlice.actions;
 
 export default blocksSlice.reducer;

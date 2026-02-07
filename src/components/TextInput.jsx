@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { updateInput, removeBlock, moveInputDown, moveInputUp } from '../features/blocks/blocks';
+import { updateInput, removeBlock, moveBlockDown, moveBlockUp } from '../features/blocks/blocks';
 import style from './TextInput.module.scss';
 import TextareaAutosize from 'react-textarea-autosize';
 
@@ -17,10 +17,10 @@ function TextInput({ id, value, index, ref, isDisabled, onKeyDown }) {
   };
 
   const handleMoveDown = (index) => {
-    dispatch(moveInputDown({ index }));
+    dispatch(moveBlockDown({ index }));
   };
   const handleMoveUp = (index) => {
-    dispatch(moveInputUp({ index }));
+    dispatch(moveBlockUp({ index }));
   };
 
   return (
