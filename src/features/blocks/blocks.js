@@ -12,9 +12,10 @@ const blocksSlice = createSlice(
                 const isDisabled = action.payload?.isDisabled || false;
                 state.items.push({ id: newId, type: action.payload.type, value: '', className: action.payload.className, tag: action.payload.tag, isDisabled });
             },
-            addList(state, action) {
-                0;
-            },
+            // addList(state, action) {
+            //     const newId = Date.now().toString();
+            //     state.items.push({ id: newId, type: action.payload.type, value: '', className: action.payload.className, tag: action.payload.tag });
+            // },
             updateInput(state, action) {
                 const { id, value } = action.payload;
                 const input = state.items.find(item => item.id === id);
