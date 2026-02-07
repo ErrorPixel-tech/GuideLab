@@ -44,5 +44,4 @@ function TextInput({ id, value, index, ref, onKeyDown }) {
     </div>
   );
 }
-
 export default TextInput;
