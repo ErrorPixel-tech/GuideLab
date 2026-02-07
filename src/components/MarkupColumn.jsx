@@ -6,17 +6,15 @@ function MarkupColumn() {
   const inputs = useSelector((state) => state.inputs.items);
 
   function createMarkUpCodeArray() {
-    let code = inputs.reduce((acc, input) => {
+    let code = inputs.map((input) => {
       if (input.type === "hr") {
-        return acc + `[${input.tag}][/${input.tag}]\n`;
+        return `[${input.tag}][/${input.tag}]\n`;
       }
       if (input.type === "screenshot") {
-        return acc + `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
+        return `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
       }
       if (input.type === "screenshot-horizontal") {
-        return acc + (
-          `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
-        )
+        return (`[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
       }
       // if (input.type === "code") {
       //   return acc + (
@@ -27,7 +25,7 @@ function MarkupColumn() {
       // }
       if (input.type === "code") {
         return (
-          acc + ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n")
+          ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n")
         )
       }
       if (input.tag) {
@@ -37,17 +35,18 @@ function MarkupColumn() {
         // let cleaned = raw.replace(/\s+/g, ' ').trim();
 
         return (
-          acc + raw + '\n')
+          raw + '\n')
       }
       return (
-        acc + (input.value || `\u00A0`) + "\n"
+        (input.value || `\u00A0`) + "\n"
       )
 
       // return acc + input.value;
-    }, "");
+    });
 
-    code += "\n[i]Сделано с помощью SteamEditor![/i]\n";
-
+    code.push("\n[i]Сделано с помощью GuidesEditor![/i]\n");
+    console.log(code);
+    
     return code;
   }
 
@@ -117,6 +116,10 @@ function MarkupColumn() {
         <button onClick={handleCopyClick}>Скопировать</button>
       </div>
       <div className='markup-list'>
+        {createMarkUpCodeArray().map((el, index)=>{
+          return (
+            <pre className={style.pre} key={index}>{el}</pre>)
+        })}
         {/* {createMarkUpCodeArray().map((el) => {
           return (<div>{el}</div>)
 
@@ -184,7 +187,7 @@ function MarkupColumn() {
             </pre>
           )
         })}
-        <p>Сделано с помощью SteamEditor!<br></br>www.steam-editor.com
+        <p>Сделано с помощью SteamEditor!<br></br>
         </p>
       </div>
     </div>
