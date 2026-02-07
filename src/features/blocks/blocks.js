@@ -27,6 +27,7 @@ const blocksSlice = createSlice(
                 state.items.push({
                     id: listId,
                     blockType: "listBlock",
+                    type: "listBlock",
                     className: action.payload.className,
                     inputBlocks: [
                         { id: itemId, value: '' }
@@ -39,6 +40,9 @@ const blocksSlice = createSlice(
                 if (input) {
                     input.value = value;
                 }
+            },
+            updateList(state, action) {
+                state; action;
             },
             formatAllBlocks(state) {
                 state.items = state.items.map((input) => {
@@ -75,6 +79,6 @@ const blocksSlice = createSlice(
     }
 );
 
-export const { addList, moveBlockUp, moveBlockDown, addInput, updateInput, removeBlock, removeAllBlocks, formatAllBlocks } = blocksSlice.actions;
+export const { updateList, addList, moveBlockUp, moveBlockDown, addInput, updateInput, removeBlock, removeAllBlocks, formatAllBlocks } = blocksSlice.actions;
 
 export default blocksSlice.reducer;

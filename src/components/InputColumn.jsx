@@ -4,6 +4,7 @@ import style from './InputColumn.module.scss';
 import { removeAllBlocks } from '../features/blocks/blocks';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
+import ListItemInput from './ListItemInput';
 
 function InputColumn() {
   const inputsRef = useRef([]);
@@ -42,7 +43,13 @@ function InputColumn() {
 
       <div className={style.list}>
         {blocks.map((block, index) => {
-
+          console.log("block");
+          console.log(block);
+          if (block.type === "listBlock") {
+            return (<div key={block.id}>
+              <ListItemInput></ListItemInput>
+            </div>);
+          }
 
           if (block.type === "hr") {
             return (

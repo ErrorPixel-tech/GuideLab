@@ -1,0 +1,174 @@
+.container__menu {
+    display: none;
+    gap: 5px;
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+    &:hover {
+        display: flex;
+    }
+
+    padding-bottom: 16px;
+    padding-left: 40px;
+}
+
+.menu__button {
+    height: 36px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-size: 12px;
+    // line-height: 1;
+    // line-height: 12px;
+    // text-align: center;
+    font-weight: 400;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &:hover {
+        background: #0056b3;
+        display: block;
+        display: flex;
+    }
+
+    &--red {
+        background: #c72626;
+    }
+
+    &--red:hover {
+        background: #741414;
+    }
+}
+
+
+.container {
+    margin-top: 6px;
+    // display: flex;
+    position: relative;
+    // justify-content: space-between;
+    // align-items: center;
+    min-height: 36px;
+    max-width: 100%;
+}
+
+.input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    border-color: rgb(62, 68, 70);
+    // border-color: rgb(62, 68, 70);
+    // Синхронность расш с запретом уменьшения
+    // min-width: 100%;
+
+    // Синхронность расш но каждый по отдельности уменьшается
+    // width: 100%;
+
+    // max-width: 100%;
+
+    // min-height: 35px;
+    min-height: 36px;
+
+    $dis-bg: #3a3a3a;
+    $dis-text: #8c8c8c;
+    $dis-border: #505050;
+
+    &:disabled {
+        background-color: $dis-bg;
+        color: $dis-text;
+        border-color: $dis-border;
+        opacity: 0.7;
+    }
+
+    min-width: 242px;
+
+    &:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    &:focus~.container__menu {
+        display: flex;
+    }
+
+    &:hover~.container__menu {
+        display: flex;
+    }
+
+    +button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 36px;
+        display: none;
+        padding: 10px 16px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+
+
+        // height: 30px;
+        // width: 30px;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        &:hover {
+            background: #0056b3;
+            display: block;
+            display: flex;
+
+        }
+    }
+
+    &:hover+button {
+        color: green;
+        display: inline-block;
+    }
+
+    &:hover~.btnup {
+        color: green;
+        display: inline-block;
+    }
+}
+
+
+
+// .inputs-list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+
+//   input {
+//     padding: 8px 12px;
+//     border: 1px solid #ccc;
+//     border-radius: 4px;
+//     font-size: 14px;
+
+//     &:focus {
+//       outline: none;
+//       border-color: #007bff;
+//     }
+//   }
+// }
+
+// Мобила (примерно до 768px)
+@media (max-width: 768px) {
+  .input {
+    min-width: 100%;
+  }
+}

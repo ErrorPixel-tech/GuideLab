@@ -24,6 +24,11 @@ function ButtonColumn() {
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p", className: "steam__paragraph", tag: "p" })}>Text</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "enter", className: "steam__enter", tag: "", isDisabled: true })}>Enter</ButtonType>
         </div>
+        
+        {/* WORK */}
+        <div className={style['btns-block']}>
+          <ButtonType className={style['button']} onClick={() => handleAddList({ className: "steam__list" })}>[LIST]</ButtonType>
+        </div>
 
         <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--header']}`} onClick={() => handleAddInput({ type: "h1", className: "steam__header-1", tag: "h1" })}>[h1]</ButtonType>
@@ -50,10 +55,6 @@ function ButtonColumn() {
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "spoiler", className: "steam__spoiler", tag: "spoiler" })}>[spoiler]</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "noparse", className: "steam__noparse", tag: "noparse" })}>[noparse]</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "...", className: "steam__text", tag: "" })}>[...]</ButtonType>
-        </div>
-
-        <div className={style['btns-block']}>
-          <ButtonType className={style['button']} onClick={() => handleAddList({className: "steam__list"})}>[LIST]</ButtonType>
         </div>
 
         <div className={style['btns-block']}>

@@ -35,7 +35,6 @@ function MarkupColumn() {
       )
     });
     code.push("\n[i]Сделано с помощью GuideForge![/i]\n");
-    console.log(inputs);
     
     return code;
   }
