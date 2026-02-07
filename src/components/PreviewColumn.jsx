@@ -28,8 +28,8 @@ function PreviewColumn() {
         {inputs.map((input) => {
           if (input.type === "hr") {
             return (
-              <div>
-                <div key={input.id} className={input.className}>
+              <div key={input.id} >
+                <div className={input.className}>
                 </div>
                 &nbsp;
               </div>
@@ -44,11 +44,11 @@ function PreviewColumn() {
           }
           if (input.type === "screenshot-horizontal") {
             return (
-              <div className={input.className}>
-                <div key={input.id}>
+              <div key={input.id} className={input.className}>
+                <div >
                   <span>Картинка</span>
                 </div>
-                <div key={input.id}>
+                <div >
                   <span>Картинка</span>
                 </div>
               </div>

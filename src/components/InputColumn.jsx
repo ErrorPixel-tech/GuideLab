@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import TextInput from './TextInput';
 import style from './InputColumn.module.scss';
-import { removeAllInputs, moveInputDown } from '../features/inputs/inputs';
+import { removeAllInputs } from '../features/inputs/inputs';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 
@@ -47,32 +47,31 @@ function InputColumn() {
           if (input.type === "hr") {
             return (
               <div key={input.id}>
-                {input.tag}<TextInput index={index} key={input.id} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
+                {input.tag}<TextInput index={index} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
               </div>
             );
           }
           if (input.type === "screenshot") {
             return (
               <div key={input.id}>
-                {input.type}{input.tag}<TextInput disabled key={input.id} index={index} id={input.id} value={"[СКРИНШОТ]"} />
+                {input.type}{input.tag}<TextInput disabled index={index} id={input.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }
           if (input.type === "screenshot-horizontal") {
             return (
               <div key={input.id}>
-                {input.type}{input.tag}<TextInput disabled key={input.id} index={index} id={input.id} value={"[СКРИНШОТ]"} />
+                {input.type}{input.tag}<TextInput disabled index={index} id={input.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }
           return (
             <div key={input.id}>
               {input.type}<TextInput
-                key={input.id}
                 index={index}
                 ref={(el) => (inputsRef.current[input.id] = el)}
                 onKeyDown={handleKeyDown(input.id)}
-                id={input.id} 
+                id={input.id}
                 value={input.value} />
             </div>
           );

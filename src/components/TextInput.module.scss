@@ -1,3 +1,51 @@
+.container__menu {
+    display: none;
+    gap: 5px;
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+    &:hover {
+        display: flex;
+    }
+}
+
+.menu__button {
+    height: 36px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-size: 12px;
+    // line-height: 1;
+    // line-height: 12px;
+    // text-align: center;
+    font-weight: 400;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &:hover {
+        background: #0056b3;
+        display: block;
+        display: flex;
+
+    }
+
+    &--red {
+        background: #c72626;
+    }
+
+    &--red:hover {
+        background: #741414;
+    }
+}
+
+
 .container {
     margin-top: 6px;
     // display: flex;
@@ -23,6 +71,10 @@
     &:focus {
         outline: none;
         border-color: #007bff;
+    }
+
+    &:focus~.container__menu {
+        display: flex;
     }
 
     +button {
@@ -57,6 +109,11 @@
     }
 
     &:hover+button {
+        color: green;
+        display: inline-block;
+    }
+
+    &:hover~.btnup {
         color: green;
         display: inline-block;
     }

@@ -17,30 +17,30 @@ function TextInput({ id, value, index, ref, onKeyDown }) {
   };
 
   const handleMoveDown = (index) => {
-    dispatch(moveInputDown({index}));
+    dispatch(moveInputDown({ index }));
   };
   const handleMoveUp = (index) => {
-    dispatch(moveInputUp({index}));
+    dispatch(moveInputUp({ index }));
   };
 
   return (
     <div className={style.container}>
-      <button onClick={()=>{handleMoveUp(index)}}>UP</button>
-      <button onClick={()=>{handleMoveDown(index)}}>DOWN</button>
       <TextareaAutosize
         minRows={1}
         maxRows={5}
-        key={id}
         ref={ref}
         onKeyDown={onKeyDown}
-
         className={style.input}
         type="text"
         value={value}
         onChange={handleChange}
         placeholder="Введите текст..."
       ></TextareaAutosize>
-      <button onClick={handleDelete}>x</button>
+      <div className={style.container__menu}>
+        <button className={style.menu__button} onClick={() => { handleMoveUp(index) }}>↑</button>
+        <button className={style.menu__button + " " + style['menu__button--red']} onClick={handleDelete}>x</button>
+        <button className={style.menu__button} onClick={() => { handleMoveDown(index) }}>↓</button>
+      </div>
     </div>
   );
 }
