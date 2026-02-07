@@ -8,6 +8,7 @@
     &:hover {
         display: flex;
     }
+
     padding-bottom: 16px;
     padding-left: 40px;
 }
@@ -54,7 +55,7 @@
     // justify-content: space-between;
     // align-items: center;
     min-height: 36px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .input {
@@ -62,13 +63,19 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    width: 100%;
 
-    min-width: 100%;
-    min-height: 35px;
-
-    height: 36px;
-
+    // Синхронность расш с запретом уменьшения
+    // min-width: 100%;
+    
+    // Синхронность расш но каждый по отдельности уменьшается
+    // width: 100%;
+    
+    // max-width: 100%;
+    
+    // min-height: 35px;
+    min-height: 36px;
+    
+    min-width: 242px;
     &:focus {
         outline: none;
         border-color: #007bff;
