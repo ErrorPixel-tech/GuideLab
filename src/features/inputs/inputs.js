@@ -15,7 +15,8 @@ const inputsSlice = createSlice(
                 // const newId = state.items.length > 0
                 //     ? Math.max(...state.items.map(i => i.id)) + 1
                 //     : 1;
-                state.items.push({ id: newId, type: action.payload.type, value: '', className: action.payload.className, tag: action.payload.tag });
+                const isDisabled = action.payload?.isDisabled || false;
+                state.items.push({ id: newId, type: action.payload.type, value: '', className: action.payload.className, tag: action.payload.tag, isDisabled });
             },
             updateInput(state, action) {
                 const { id, value } = action.payload;

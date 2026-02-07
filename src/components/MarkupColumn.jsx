@@ -11,11 +11,11 @@ function MarkupColumn() {
         return acc + `[${input.tag}][/${input.tag}]\n`;
       }
       if (input.type === "screenshot") {
-        return acc + `[table]\n[tr]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[/tr][/table]\n`
+        return acc + `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
       }
       if (input.type === "screenshot-horizontal") {
         return acc + (
-          `[table]\n[tr]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[/tr]\n[/table]\n`
+          `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
         )
       }
       // if (input.type === "code") {
@@ -31,7 +31,7 @@ function MarkupColumn() {
         )
       }
       if (input.tag) {
-        let raw = ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n"
+        let raw = ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]"
         );
 
         // let cleaned = raw.replace(/\s+/g, ' ').trim();
@@ -82,29 +82,33 @@ function MarkupColumn() {
           if (input.type === "screenshot") {
             return (
               <div key={input.id}>
+                [p]<br></br>
                 [table]<br></br>
                 [tr]<br></br>
                 [td]<br></br>
-                {`ВставьтеСкриншотСюда`}<br></br>
+                {`ВставьтеСкриншотСюдаВоВсюШирину`}<br></br>
                 [/td]<br></br>
                 [/tr]<br></br>
                 [/table]<br></br>
+                [/p]<br></br>
               </div>
             )
           }
           if (input.type === "screenshot-horizontal") {
             return (
               <div key={input.id}>
+                [p]<br></br>
                 [table]<br></br>
                 [tr]<br></br>
                 [td]<br></br>
-                ВставьтеСкриншотСюда<br></br>
+                ВставьтеСкриншотСюдаВоВсюШирину<br></br>
                 [/td]<br></br>
                 [td]<br></br>
-                ВставьтеСкриншотСюда<br></br>
+                ВставьтеСкриншотСюдаВоВсюШирину<br></br>
                 [/td]<br></br>
                 [/tr]<br></br>
                 [/table]<br></br>
+                [/p]<br></br>
               </div>
             )
           }

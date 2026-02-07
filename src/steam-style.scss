@@ -5,7 +5,7 @@
     color: rgb(150, 150, 150);
     word-wrap: break-word;
     color: var(--darkreader-text-969696, #a69e92);
-    margin-top: 16px;
+    // margin-top: 16px;
     margin-bottom: 16px;
 }
 
@@ -35,7 +35,7 @@
     margin-bottom: 10px;
     color: #5aa9d6;
     clear: both;
-    margin-top: 16px;
+    // margin-top: 16px;
     margin-bottom: 12px;
 }
 
@@ -47,7 +47,7 @@
     margin-top: 8px;
     color: #5aa9d6;
     clear: both;
-    margin-top: 10px;
+    // margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -59,7 +59,7 @@
     margin-top: 8px;
     color: #5aa9d6;
     clear: both;
-    margin-top: 6px;
+    // margin-top: 6px;
     margin-bottom: 6px;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .steam__screenshot {
-    margin: 6px 0;
+    // margin: 6px 0;
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -96,6 +96,11 @@
     // & span {
     // display: flex;
     // }
+    padding: 3px;
+    background-clip: content-box;
+    border: 1px solid grey;
+    margin: 1px 0;
+    margin-bottom: 16px;
 }
 
 .steam__pullquote {
@@ -105,9 +110,11 @@
 }
 
 .steam__screenshot-horizontal {
-    margin: 6px 0;
     display: flex;
     gap: 5px;
+    background-clip: content-box;
+    padding: 3px;
+    border: 1px solid grey;
 
     div {
         display: block;
@@ -118,6 +125,9 @@
         justify-content: center;
         align-items: center;
     }
+
+    margin: 1px 0;
+    margin-bottom: 16px;
 }
 
 .steam__italic {

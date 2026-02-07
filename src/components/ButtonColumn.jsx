@@ -19,6 +19,7 @@ function ButtonColumn() {
       <div className={style['container']}>
         <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p", className: "steam__paragraph", tag: "p" })}>[p]</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "enter", className: "steam__enter", tag: "", isDisabled: true })}>Enter</ButtonType>
         </div>
 
         <div className={style['btns-block']}>
@@ -36,8 +37,8 @@ function ButtonColumn() {
         </div>
 
         <div className={style['btns-block']}>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot", className: "steam__screenshot", tag: "" })}>Изображение</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot-horizontal", className: "steam__screenshot-horizontal", tag: "" })}>Галерея</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot", className: "steam__screenshot", tag: "", isDisabled: true })}>Изображение</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot-horizontal", className: "steam__screenshot-horizontal", tag: "", isDisabled: true })}>Галерея</ButtonType>
         </div>
 
         <div className={style['btns-block']}>
@@ -48,7 +49,7 @@ function ButtonColumn() {
         </div>
 
         <div className={style['btns-block']}>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "hr", className: "steam__separator", tag: "hr" })}>[separator]</ButtonType></div>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "hr", className: "steam__separator", tag: "hr", isDisabled: true })}>[separator]</ButtonType></div>
       </div>
     </div>
   );

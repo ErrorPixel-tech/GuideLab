@@ -8,6 +8,8 @@
     &:hover {
         display: flex;
     }
+    padding-bottom: 16px;
+    padding-left: 40px;
 }
 
 .menu__button {
@@ -33,7 +35,6 @@
         background: #0056b3;
         display: block;
         display: flex;
-
     }
 
     &--red {
@@ -74,6 +75,10 @@
     }
 
     &:focus~.container__menu {
+        display: flex;
+    }
+
+    &:hover~.container__menu {
         display: flex;
     }
 

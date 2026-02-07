@@ -3,7 +3,7 @@ import { updateInput, removeInput, moveInputDown, moveInputUp } from '../feature
 import style from './TextInput.module.scss';
 import TextareaAutosize from 'react-textarea-autosize';
 
-function TextInput({ id, value, index, ref, onKeyDown }) {
+function TextInput({ id, value, index, ref, isDisabled, onKeyDown }) {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -28,6 +28,7 @@ function TextInput({ id, value, index, ref, onKeyDown }) {
       <TextareaAutosize
         minRows={1}
         maxRows={5}
+        disabled={isDisabled}
         ref={ref}
         onKeyDown={onKeyDown}
         className={style.input}

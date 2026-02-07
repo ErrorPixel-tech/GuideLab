@@ -47,21 +47,34 @@ function InputColumn() {
           if (input.type === "hr") {
             return (
               <div key={input.id}>
-                {input.tag}<TextInput index={index} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
+                {input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
               </div>
             );
           }
           if (input.type === "screenshot") {
             return (
               <div key={input.id}>
-                {input.type}{input.tag}<TextInput disabled index={index} id={input.id} value={"[СКРИНШОТ]"} />
+                {input.type}{input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }
           if (input.type === "screenshot-horizontal") {
             return (
               <div key={input.id}>
-                {input.type}{input.tag}<TextInput disabled index={index} id={input.id} value={"[СКРИНШОТ]"} />
+                {input.type}{input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[ГАЛЕРЕЯ]"} />
+              </div>
+            );
+          }
+          if (input.isDisabled) {
+            return (
+              <div key={input.id}>
+                {input.type}<TextInput
+                  index={index}
+                  isDisabled={input.isDisabled}
+                  ref={(el) => (inputsRef.current[input.id] = el)}
+                  onKeyDown={handleKeyDown(input.id)}
+                  id={input.id}
+                  value={"[ENTER]"} />
               </div>
             );
           }
@@ -69,6 +82,7 @@ function InputColumn() {
             <div key={input.id}>
               {input.type}<TextInput
                 index={index}
+                isDisabled={input.isDisabled}
                 ref={(el) => (inputsRef.current[input.id] = el)}
                 onKeyDown={handleKeyDown(input.id)}
                 id={input.id}
