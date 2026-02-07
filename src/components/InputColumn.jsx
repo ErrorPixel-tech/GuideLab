@@ -17,7 +17,7 @@ function InputColumn() {
   };
 
 
-  const inputs = useSelector((state) => state.blocks.items);
+  const blocks = useSelector((state) => state.blocks.items);
 
   const dispatch = useDispatch();
 
@@ -41,7 +41,7 @@ function InputColumn() {
       </div>
 
       <div className={style.list}>
-        {inputs.map((input, index) => {
+        {blocks.map((input, index) => {
 
 
           if (input.type === "hr") {
