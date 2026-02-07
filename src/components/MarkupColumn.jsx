@@ -11,13 +11,13 @@ function MarkupColumn() {
         return `[${input.tag}][/${input.tag}]\n`;
       }
       if (input.type === "screenshot") {
-        return `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
+        return `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[/tr]\n[/table]\n[/p]\n`
       }
       if (input.type === "screenshot-horizontal") {
-        return (`[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
+        return (`[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
       }
       if (input.type === "screenshot-block") {
-        return (`[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
+        return (`[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[/tr]\n[tr]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[td]\nВставьтеСкриншотСюда\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
       }
       if (input.type === "code") {
         return (
