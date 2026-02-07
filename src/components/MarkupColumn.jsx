@@ -16,13 +16,6 @@ function MarkupColumn() {
       if (input.type === "screenshot-horizontal") {
         return (`[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
       }
-      // if (input.type === "code") {
-      //   return acc + (
-      //     <pre className={style.pre} key={input.id}>
-      //       [{input.tag}]{input.value}[/{input.tag}]
-      //     </pre>
-      //   )
-      // }
       if (input.type === "code") {
         return (
           ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n")
@@ -31,72 +24,24 @@ function MarkupColumn() {
       if (input.tag) {
         let raw = ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]"
         );
-
-        // let cleaned = raw.replace(/\s+/g, ' ').trim();
-
         return (
           raw + '\n')
       }
       return (
         (input.value || `\u00A0`) + "\n"
       )
-
-      // return acc + input.value;
     });
-
     code.push("\n[i]Сделано с помощью GuidesEditor![/i]\n");
-    console.log(code);
-    
     return code;
   }
 
   async function handleCopyClick(event) {
-    let code = inputs.reduce((acc, input) => {
-      if (input.type === "hr") {
-        return acc + `[${input.tag}][/${input.tag}]\n`;
-      }
-      if (input.type === "screenshot") {
-        return acc + `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
-      }
-      if (input.type === "screenshot-horizontal") {
-        return acc + (
-          `[p]\n[table]\n[tr]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[td]\nВставьтеСкриншотСюдаВоВсюШирину\n[/td]\n[/tr]\n[/table]\n[/p]\n`
-        )
-      }
-      // if (input.type === "code") {
-      //   return acc + (
-      //     <pre className={style.pre} key={input.id}>
-      //       [{input.tag}]{input.value}[/{input.tag}]
-      //     </pre>
-      //   )
-      // }
-      if (input.type === "code") {
-        return (
-          acc + ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]" + "\n")
-        )
-      }
-      if (input.tag) {
-        let raw = ("[" + input.tag + "]" + input.value + "[/" + input.tag + "]"
-        );
-
-        // let cleaned = raw.replace(/\s+/g, ' ').trim();
-
-        return (
-          acc + raw + '\n')
-      }
-      return (
-        acc + (input.value || `\u00A0`) + "\n"
-      )
-
-      // return acc + input.value;
-    }, "");
-
-    code += "\n[i]Сделано с помощью SteamEditor![/i]\n";
-
-
+    let a = createMarkUpCodeArray();
+    
+    let newcode = a.reduce((acc, el)=>acc + el, "");
 
     try {
-      await navigator.clipboard.writeText(code);
+      await navigator.clipboard.writeText(newcode);
       // btn.textContent = 'Скопировано!';
       event.target.textContent = 'Скопировано!';
       // через 5 секунд вернуть назад
@@ -106,7 +51,7 @@ function MarkupColumn() {
     } catch (err) {
       console.error('Не удалось скопировать: ', err);
     }
-    return code;
+    return newcode;
   }
 
   return (
@@ -120,75 +65,6 @@ function MarkupColumn() {
           return (
             <pre className={style.pre} key={index}>{el}</pre>)
         })}
-        {/* {createMarkUpCodeArray().map((el) => {
-          return (<div>{el}</div>)
-
-        })} */}
-      </div>
-      <div className="markup-list">
-        {inputs.map((input) => {
-          if (input.type === "hr") {
-            return (
-              <div key={input.id}>
-                [{input.tag}][/{input.tag}]
-              </div>
-            )
-          }
-          if (input.type === "screenshot") {
-            return (
-              <div key={input.id}>
-                [p]<br></br>
-                [table]<br></br>
-                [tr]<br></br>
-                [td]<br></br>
-                {`ВставьтеСкриншотСюдаВоВсюШирину`}<br></br>
-                [/td]<br></br>
-                [/tr]<br></br>
-                [/table]<br></br>
-                [/p]<br></br>
-              </div>
-            )
-          }
-          if (input.type === "screenshot-horizontal") {
-            return (
-              <div key={input.id}>
-                [p]<br></br>
-                [table]<br></br>
-                [tr]<br></br>
-                [td]<br></br>
-                ВставьтеСкриншотСюдаВоВсюШирину<br></br>
-                [/td]<br></br>
-                [td]<br></br>
-                ВставьтеСкриншотСюдаВоВсюШирину<br></br>
-                [/td]<br></br>
-                [/tr]<br></br>
-                [/table]<br></br>
-                [/p]<br></br>
-              </div>
-            )
-          }
-          if (input.type === "code") {
-            return (
-              <pre className={style.pre} key={input.id}>
-                [{input.tag}]{input.value}[/{input.tag}]
-              </pre>
-            )
-          }
-          if (input.tag) {
-            return (
-              <pre key={input.id} className={style.pre}>
-                [{input.tag}]{input.value}[/{input.tag}]
-              </pre>
-            )
-          }
-          return (
-            <pre key={input.id} className={style.pre}>
-              {input.value || `\u00A0`}
-            </pre>
-          )
-        })}
-        <p>Сделано с помощью SteamEditor!<br></br>
-        </p>
       </div>
     </div>
   );
