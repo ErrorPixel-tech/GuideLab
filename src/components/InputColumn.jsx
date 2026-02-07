@@ -41,59 +41,59 @@ function InputColumn() {
       </div>
 
       <div className={style.list}>
-        {blocks.map((input, index) => {
+        {blocks.map((block, index) => {
 
 
-          if (input.type === "hr") {
+          if (block.type === "hr") {
             return (
-              <div key={input.id}>
-                {input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
+              <div key={block.id}>
+                {block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ПЕРЕНОС СТРОКИ]"} />
               </div>
             );
           }
-          if (input.type === "screenshot") {
+          if (block.type === "screenshot") {
             return (
-              <div key={input.id}>
-                {input.type}{input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[СКРИНШОТ]"} />
+              <div key={block.id}>
+                {block.type}{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }
-          if (input.type === "screenshot-horizontal") {
+          if (block.type === "screenshot-horizontal") {
             return (
-              <div key={input.id}>
-                {input.type}{input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[ГАЛЕРЕЯ 2 КАРТИНКИ]"} />
+              <div key={block.id}>
+                {block.type}{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ГАЛЕРЕЯ 2 КАРТИНКИ]"} />
               </div>
             );
           }
-          if (input.type === "screenshot-block") {
+          if (block.type === "screenshot-block") {
             return (
-              <div key={input.id}>
-                {input.type}{input.tag}<TextInput isDisabled={input.isDisabled} index={index} id={input.id} value={"[ГАЛЕРЕЯ 4 КАРТИНКИ]"} />
+              <div key={block.id}>
+                {block.type}{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ГАЛЕРЕЯ 4 КАРТИНКИ]"} />
               </div>
             );
           }
-          if (input.isDisabled) {
+          if (block.isDisabled) {
             return (
-              <div key={input.id}>
-                {input.type}<TextInput
+              <div key={block.id}>
+                {block.type}<TextInput
                   index={index}
-                  isDisabled={input.isDisabled}
-                  ref={(el) => (inputsRef.current[input.id] = el)}
-                  onKeyDown={handleKeyDown(input.id)}
-                  id={input.id}
+                  isDisabled={block.isDisabled}
+                  ref={(el) => (inputsRef.current[block.id] = el)}
+                  onKeyDown={handleKeyDown(block.id)}
+                  id={block.id}
                   value={"[ENTER]"} />
               </div>
             );
           }
           return (
-            <div key={input.id}>
-              {input.type}<TextInput
+            <div key={block.id}>
+              {block.type}<TextInput
                 index={index}
-                isDisabled={input.isDisabled}
-                ref={(el) => (inputsRef.current[input.id] = el)}
-                onKeyDown={handleKeyDown(input.id)}
-                id={input.id}
-                value={input.value} />
+                isDisabled={block.isDisabled}
+                ref={(el) => (inputsRef.current[block.id] = el)}
+                onKeyDown={handleKeyDown(block.id)}
+                id={block.id}
+                value={block.value} />
             </div>
           );
         }
