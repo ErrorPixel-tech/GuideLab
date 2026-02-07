@@ -43,11 +43,11 @@ const inputsSlice = createSlice(
                 // if (newIndex >= state.items.length) { newIndex = 0; }
                 if (newIndex >= state.items.length) { return; }
 
-                // console.log("ДВИГАЮ");
-                // console.log("index: " + index);
-                // console.log("index: " + state.items[index]);
-                // console.log("newindex: " + newIndex);
-                // console.log("newindex: " + state.items[newIndex]);
+                console.log("ДВИГАЮ");
+                console.log("index: " + index);
+                console.log("index: " + state.items[index]);
+                console.log("newindex: " + newIndex);
+                console.log("newindex: " + state.items[newIndex]);
                 
 
 

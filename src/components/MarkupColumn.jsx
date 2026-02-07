@@ -117,13 +117,13 @@ function MarkupColumn() {
           }
           if (input.tag) {
             return (
-              <pre key={input.id}>
+              <pre key={input.id} className={style.pre}>
                 [{input.tag}]{input.value}[/{input.tag}]
               </pre>
             )
           }
           return (
-            <pre key={input.id}>
+            <pre key={input.id} className={style.pre}>
               {input.value || `\u00A0`}
             </pre>
           )

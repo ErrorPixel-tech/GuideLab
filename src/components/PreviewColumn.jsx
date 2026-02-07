@@ -63,7 +63,7 @@ function PreviewColumn() {
             )
           }
           return (
-            <pre key={input.id} className={input.className}>
+            <pre key={input.id} className={input.className  + " pre"}>
               {input.value || `\u00A0`}
             </pre>
           )

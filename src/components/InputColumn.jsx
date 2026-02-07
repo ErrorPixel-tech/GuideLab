@@ -47,21 +47,21 @@ function InputColumn() {
           if (input.type === "hr") {
             return (
               <div key={input.id}>
-                {input.tag}<TextInput key={input.id} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
+                {input.tag}<TextInput index={index} key={input.id} id={input.id} value={"[ПЕРЕНОС СТРОКИ]"} />
               </div>
             );
           }
           if (input.type === "screenshot") {
             return (
               <div key={input.id}>
-                {input.type}{input.tag}<TextInput disabled key={input.id} id={input.id} value={"[СКРИНШОТ]"} />
+                {input.type}{input.tag}<TextInput disabled key={input.id} index={index} id={input.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }
           if (input.type === "screenshot-horizontal") {
             return (
               <div key={input.id}>
-                {input.type}{input.tag}<TextInput disabled key={input.id} id={input.id} value={"[СКРИНШОТ]"} />
+                {input.type}{input.tag}<TextInput disabled key={input.id} index={index} id={input.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }

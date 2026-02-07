@@ -186,3 +186,13 @@
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
     word-wrap: break-word;
 }
+
+.pre {
+    white-space: pre-wrap;
+    /* сохраняет переводы строк, но позволяет переносить */
+    word-wrap: break-word;
+    /* старый синоним, на всякий случай */
+    overflow-wrap: anywhere;
+    /* агрессивные переносы длинных слов/URL */
+
+}
