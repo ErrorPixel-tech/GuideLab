@@ -22,7 +22,7 @@ function ButtonColumn() {
       </div>
 
       <div className={style['container']}>
-       
+
 
         <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p", className: "steam__paragraph", tag: "p" })}>Text</ButtonType>
@@ -40,10 +40,13 @@ function ButtonColumn() {
           <ButtonType className={`${style['button']} ${style['button--header']}`} onClick={() => handleAddInput({ type: "h3", className: "steam__header-3", tag: "h3" })}>[h3]</ButtonType>
         </div>
 
-         <div className={style['btns-block']}>
+        {/*LISTS */}
+        <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "list", className: "steam__list", tag: "list" })}>List</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "olist", className: "steam__olist", tag: "olist" })}>oList</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "slist", className: "steam__slist", tag: "slist" })}>-List</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "numlist", className: "steam__numlist", tag: "numlist" })}>numList</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "checkbox", className: "steam__checkbox", tag: "checkbox" })}>Checkbox</ButtonType>
         </div>
 
         <div className={style['btns-block']}>

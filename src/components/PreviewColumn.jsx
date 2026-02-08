@@ -179,6 +179,47 @@ function PreviewColumn() {
               </ul>
             )
           }
+          if (input.tag === "checkbox") {
+
+            if (!input.value.trim()) {
+              return (
+                <ul className={input.className}>
+                  <li key={1}>- [x] Lorem ipsum dolor sit amet.</li>
+                  <li key={2}>- [ ] Lorem ipsum dolor sit amet.</li>
+                  <li key={3}>- [ ] Lorem ipsum dolor sit amet.</li>
+                </ul>
+              )
+            }
+            const arr = input.value.split(/\r?\n/);
+            return (
+              <ul className={input.className}>
+                {arr.map((str, index) => {
+                  return <li key={index}>[ ] {str}</li>
+                })}
+              </ul>
+            )
+          }
+          if (input.tag === "numlist") {
+
+            if (!input.value.trim()) {
+              return (
+                <ul className={input.className}>
+                  <li key={1}>1. Lorem ipsum dolor sit amet.</li>
+                  <li key={2}>2. Lorem ipsum dolor sit amet.</li>
+                  <li key={3}>3. Lorem ipsum dolor sit amet.</li>
+                </ul>
+              )
+            }
+            let i = 1;
+            const arr = input.value.split(/\r?\n/);
+            return (
+              <ul className={input.className}>
+                {arr.map((str, index) => {
+                  return <li key={index}>{i++}. {str}</li>
+                })}
+              </ul>
+            )
+          }
 
 
           if (input.tag === "h1" || input.tag === "h2" || input.tag === "h3") {

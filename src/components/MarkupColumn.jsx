@@ -79,11 +79,30 @@ function MarkupColumn() {
         return list;
       }
       if (input.type === "slist") {
-        let list = ""; list += '[p]\n';
+        let list = "";
+        list += '[p]\n';
         list += "- ";
         const withMarks = input.value.replace(/\n/g, '\n- ');
         list += withMarks;
         list += '\n[/p]\n';
+        return list;
+      }
+      if (input.type === "checkbox") {
+        let list = "";
+        list += '[table]\n[code]\n[b]СПИСОК ДЕЛ:[/b]\n';
+        list += "- [ ] ";
+        const withMarks = input.value.replace(/\n/g, '\n- [ ] ');
+        list += withMarks;
+        list += '\n[/code]\n[/table]\n';
+        return list;
+      }
+      if (input.type === "numlist") {
+        let i = 2;
+        let list = ""; list += '[p]\n';
+        list += "1. ";
+        const withMarks = input.value.replace(/\n/g, `\n${i++}. `);
+        list += withMarks;
+        list += '\n[/code]\n';
         return list;
       }
       if (input.tag === "u"
@@ -109,13 +128,42 @@ function MarkupColumn() {
         (input.value || `\u00A0`) + "\n"
       )
     });
-    code.push("\n[i]Сделано с помощью GuideForge![/i]\n");
+
 
     return code;
   }
 
   async function handleCopyClick(event) {
     let a = createMarkUpCodeArray();
+
+    const phrases = [
+      { text: 'Сделано с помощью «GuideForge»', weight: 5 },  // высокий шанс
+      { text: '«GuideForge». Все права защищахахахаха...', weight: 3 },
+      { text: '«GuideForge».Кто прочёл, тот осёл :)', weight: 1 },  // низкий шанс
+    ];
+    function getRandomPhrase(phrases) {
+      // Суммируем все веса
+      const totalWeight = phrases.reduce((sum, p) => sum + p.weight, 0);
+
+      // Берём случайное число от 0 до totalWeight
+      let rnd = Math.random() * totalWeight;
+
+      // Идём по массиву и вычитаем веса, пока не "провалимся" в элемент
+      for (const phrase of phrases) {
+        rnd -= phrase.weight;
+        if (rnd <= 0) {
+          return phrase.text;
+        }
+      }
+
+      // На всякий случай, если из-за округлений не сработало
+      return phrases[phrases.length - 1].text;
+    }
+
+    const randomPhrase = getRandomPhrase(phrases);
+
+    a.push(`\n[i]${randomPhrase}[/i]\n`);
+
 
     let newcode = a.reduce((acc, el) => acc + el, "");
 

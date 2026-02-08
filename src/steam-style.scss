@@ -130,6 +130,7 @@ $color-bord: rgb(84, 91, 94);
         justify-content: flex-start;
         align-items: center;
     }
+
     margin-bottom: 16px;
 }
 
@@ -209,10 +210,13 @@ $img-bord: rgb(84, 91, 94);
     border-color: $img-bord;
 }
 
-.steam__slist {
+.steam__slist,
+.steam__numlist,
+.steam__checkbox {
     list-style: none;
     margin-bottom: 16px;
 }
+
 
 .steam__pullquote {
     font-size: 18px;
