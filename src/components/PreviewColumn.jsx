@@ -42,7 +42,7 @@ function PreviewColumn() {
           if (input.type === "p-img") {
             return (
               <div key={input.id} className={style[input.className]}>
-                <span>Картинка</span>
+                <span>{t("preview.imageTitle")}</span>
                 <pre key={input.id} className={style[input.className] + " " + style.pre}>
                   {input.value || `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus maxime qui repellendus voluptate est reprehenderit vel et.`}
                 </pre>
@@ -53,7 +53,7 @@ function PreviewColumn() {
           if (input.type === "p-img-r") {
             return (
               <div key={input.id} className={style[input.className]}>
-                <span>Картинка</span>
+                <span>{t("preview.imageTitle")}</span>
                 <pre key={input.id} className={style[input.className] + " " + style.pre}>
                   {input.value || `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus maxime qui repellendus voluptate est reprehenderit vel et.`}
                 </pre>
@@ -64,7 +64,7 @@ function PreviewColumn() {
           if (input.type === "screenshot") {
             return (
               <div key={input.id} className={style[input.className]}>
-                <span>Картинка</span>
+                <span>{t("preview.imageTitle")}</span>
               </div>
             )
           }
@@ -72,10 +72,10 @@ function PreviewColumn() {
             return (
               <div key={input.id} className={style[input.className]}>
                 <div >
-                  <span>Картинка</span>
+                  <span>{t("preview.imageTitle")}</span>
                 </div>
                 <div >
-                  <span>Картинка</span>
+                  <span>{t("preview.imageTitle")}</span>
                 </div>
               </div>
             )
@@ -84,12 +84,12 @@ function PreviewColumn() {
             return (
               <div key={input.id} className={style[input.className]}>
                 <div >
-                  <span>Картинка</span>
-                  <span>Картинка</span>
+                  <span>{t("preview.imageTitle")}</span>
+                  <span>{t("preview.imageTitle")}</span>
                 </div>
                 <div >
-                  <span>Картинка</span>
-                  <span>Картинка</span>
+                  <span>{t("preview.imageTitle")}</span>
+                  <span>{t("preview.imageTitle")}</span>
                 </div>
               </div>
             )
@@ -195,7 +195,7 @@ function PreviewColumn() {
             if (!input.value.trim()) {
               return (
                 <ul key={input.id} className={style[input.className]}>
-                  <div>СПИСОК ДЕЛ:</div>
+                  <div>{t("preview.checkboxTitle")}</div>
                   <li key={1}>- [x] Lorem ipsum dolor sit amet.</li>
                   <li key={2}>- [ ] Lorem ipsum dolor sit amet.</li>
                   <li key={3}>- [ ] Lorem ipsum dolor sit amet.</li>
