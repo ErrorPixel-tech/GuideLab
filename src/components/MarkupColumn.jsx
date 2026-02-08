@@ -1,25 +1,26 @@
 import { useSelector } from 'react-redux';
 
 import style from './MarkupColumn.module.scss';
+import { useTranslation } from 'react-i18next';
 
 function MarkupColumn() {
   const inputs = useSelector((state) => state.blocks.items);
-
+  const { t } = useTranslation();
   function createMarkUpCodeArray() {
     let code = inputs.map((input) => {
       if (input.type === "hr") {
         return `[${input.tag}][/${input.tag}]\n`;
       }
-      let imageText10 = "ВполшириныПоЛевомуКраю";
       if (input.type === "p-img") {
+        let imageText = t("markup.floatLeft");
         return (
-          `[h1][/h1]\n[p]\n${imageText10}\n[/p]\n[p]${input.value}[/p]\n[h1][/h1]\n`
+          `[h1][/h1]\n[p]\n${imageText}\n[/p]\n[p]${input.value}[/p]\n[h1][/h1]\n`
         );
       }
-      let imageText20 = "ВполшириныПоПравомуКраю";
       if (input.type === "p-img-r") {
+        let imageText = t("markup.floatRight");
         return (
-          `[h1][/h1]\n[p]\n${imageText20}\n[/p]\n[p]${input.value}[/p]\n[h1][/h1]\n`
+          `[h1][/h1]\n[p]\n${imageText}\n[/p]\n[p]${input.value}[/p]\n[h1][/h1]\n`
         );
       }
       let imageText = "ВоВсюШиринуПоЦентру";

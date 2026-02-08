@@ -15,7 +15,7 @@
         "checkboxList": "Чекбокс",
 
         "imageFloatLeft": "Слева",
-        "imageFloatRight": "Слева",
+        "imageFloatRight": "Справа",
         "1-images": "1 Картинка",
         "2-images": "2 Картинки",
         "4-images": "4 Картинки",
@@ -25,5 +25,10 @@
   "inputs": {
     "header": "Инпуты",
     "removeAllButton": "Удалить всё?"
+  },
+
+  "markup": {
+    "floatLeft": "ВполшириныПоЛевомуКраю",
+    "floatRight": "ВполшириныПоПравомуКраю"
   }
 }
