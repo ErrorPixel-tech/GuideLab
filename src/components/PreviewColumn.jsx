@@ -3,18 +3,21 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { formatAllBlocks } from '../features/blocks/blocks'
 import style from './PreviewColumn.module.scss';
+import { useTranslation } from 'react-i18next';
 
 function PreviewColumn() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const inputs = useSelector((state) => state.blocks.items);
 
   function handleFormatClick(event) {
-    if (!confirm("Вы уверены? Данная опция удалит все лишние пробелы и все переносы строк в блоках. Форматирование не затронет текст в [code] и в списках. Мы вас предупреждали.")) { return }
+    let msg = t("preview.formatButtonMsg");
+    if (!confirm(msg)) { return }
     dispatch(formatAllBlocks());
-    event.target.textContent = 'Отформатировано!';
+    event.target.textContent = t("preview.formatButtonSecondTitle");
     // через 5 секунд вернуть назад
     setTimeout(() => {
-      event.target.textContent = 'Отформатировать';
+      event.target.textContent = t("preview.formatButtonTitle");
     }, 1000);
   }
 

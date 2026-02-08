@@ -178,10 +178,10 @@ function MarkupColumn() {
     try {
       await navigator.clipboard.writeText(newcode);
       // btn.textContent = 'Скопировано!';
-      event.target.textContent = 'Скопировано!';
+      event.target.textContent = t("markup.btnTitle2");
       // через 5 секунд вернуть назад
       setTimeout(() => {
-        event.target.textContent = 'Скопировать';
+        event.target.textContent = t("markup.btnTitle1");
       }, 1000);
     } catch (err) {
       console.error('Не удалось скопировать: ', err);
