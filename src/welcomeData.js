@@ -1,12 +1,30 @@
 const dataByLang = {
     ru: {
-        blocks: {
+        "blocks": {
             "items": [
+                {
+                    "id": "1770590706983",
+                    "blockType": "inputBlock",
+                    "type": "h1",
+                    "value": "GuideLab — инструмент для оформления руководств Steam",
+                    "className": "steam__header-1",
+                    "tag": "h1",
+                    "isDisabled": false
+                },
+                {
+                    "id": "1770576925451",
+                    "blockType": "inputBlock",
+                    "type": "p",
+                    "value": "GuideLab — это простой онлайн‑инструмент для подготовки руководств для Steam, который помогает автоматически оформлять текст в нужную разметку и сразу видеть результат в превью. Сервис позволяет добавлять списки, кодовые блоки и другие элементы оформления, а затем копировать готовую разметку для вставки в руководство в Steam.",
+                    "className": "steam__paragraph",
+                    "tag": "p",
+                    "isDisabled": false
+                },
                 {
                     "id": "1770575835964",
                     "blockType": "inputBlock",
                     "type": "h1",
-                    "value": "Инструкция",
+                    "value": "Инструкция:",
                     "className": "steam__header-1",
                     "tag": "h1",
                     "isDisabled": false
@@ -24,7 +42,7 @@ const dataByLang = {
                     "id": "1770575849556",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "Слева находится панель с кнопками. Нажимая на них, вы добавляете инпуты в соответствующую колонку.",
+                    "value": "В колонке «Кнопки» находится панель с кнопками. Нажимая на них, вы добавляете текстовые поля в колонку «Инпуты».",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -42,7 +60,7 @@ const dataByLang = {
                     "id": "1770576272052",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "В инпутах можно писать или вставлять свой текст. Инпуты можно передвигать и удалять, а так-же менять их размер, если понянуть за уголок справа снизу.",
+                    "value": "В колонке «Инпуты» можно писать или вставлять свой текст. Инпуты можно передвигать и удалять, а так-же менять их размер, если понянуть за уголок справа снизу.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -87,7 +105,7 @@ const dataByLang = {
                     "id": "1770577431214",
                     "blockType": "inputBlock",
                     "type": "h2",
-                    "value": "Картинки:",
+                    "value": "Картинки",
                     "className": "steam__header-2",
                     "tag": "h2",
                     "isDisabled": false
@@ -147,7 +165,7 @@ const dataByLang = {
                     "isDisabled": false
                 },
                 {
-                    "id": "1770576925451",
+                    "id": "1770590708213",
                     "blockType": "inputBlock",
                     "type": "p",
                     "value": "",
@@ -217,10 +235,28 @@ const dataByLang = {
         "blocks": {
             "items": [
                 {
+                    "id": "1770590706983",
+                    "blockType": "inputBlock",
+                    "type": "h1",
+                    "value": "GuideLab — a tool for styling Steam guides",
+                    "className": "steam__header-1",
+                    "tag": "h1",
+                    "isDisabled": false
+                },
+                {
+                    "id": "1770576925451",
+                    "blockType": "inputBlock",
+                    "type": "p",
+                    "value": "GuideLab is a simple online tool for preparing Steam guides that helps you automatically format text into the required markup and instantly see the result in the preview. The service lets you add lists, code blocks, and other formatting elements, and then copy the finished markup to paste into your Steam guide.",
+                    "className": "steam__paragraph",
+                    "tag": "p",
+                    "isDisabled": false
+                },
+                {
                     "id": "1770575835964",
                     "blockType": "inputBlock",
                     "type": "h1",
-                    "value": "Instructions",
+                    "value": "Instructions:",
                     "className": "steam__header-1",
                     "tag": "h1",
                     "isDisabled": false
@@ -238,7 +274,7 @@ const dataByLang = {
                     "id": "1770575849556",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "On the left, there is a panel with buttons. Clicking them adds inputs to the corresponding column.",
+                    "value": "The “Buttons” column contains a panel with buttons. By clicking them, you add text fields to the “Inputs” column.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -256,7 +292,7 @@ const dataByLang = {
                     "id": "1770576272052",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "You can type or paste your own text into input fields. Inputs can be moved, deleted, and resized by dragging the bottom-right corner.",
+                    "value": "In the “Inputs” column you can write or paste your text. You can move and delete inputs, and also resize them by dragging the bottom‑right corner.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -274,7 +310,7 @@ const dataByLang = {
                     "id": "1770576111172",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "In the 'Markup' column, you can see text with Steam markup — you can copy it manually or via the 'Copy' button.",
+                    "value": "The “Markup” column shows the text with Steam markup — you can copy it manually or by using the “Copy” button.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -292,7 +328,7 @@ const dataByLang = {
                     "id": "1770575859084",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "In the 'Preview' column, you can see how the guide will look on Steam.",
+                    "value": "The “Preview” column shows how the guide will look on Steam.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -301,7 +337,7 @@ const dataByLang = {
                     "id": "1770577431214",
                     "blockType": "inputBlock",
                     "type": "h2",
-                    "value": "Images:",
+                    "value": "Images",
                     "className": "steam__header-2",
                     "tag": "h2",
                     "isDisabled": false
@@ -310,7 +346,7 @@ const dataByLang = {
                     "id": "1770575867340",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "Insert images through the Steam interface — the program will automatically leave placeholders for them in the markup.",
+                    "value": "Insert images through the Steam interface — the app will automatically leave placeholders for them in the markup.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -337,7 +373,7 @@ const dataByLang = {
                     "id": "1770576641077",
                     "blockType": "inputBlock",
                     "type": "slist",
-                    "value": "Write text in the field, pressing Enter to create new list items.\nUse Enter for a new line within the same item.\nThe 'Format' button does not affect list text.",
+                    "value": "Type text into the field, pressing Enter to create new list items.\nFor a new line inside a text field, use Enter.\nThe “Format” button does not affect text in lists.",
                     "className": "steam__slist",
                     "tag": "slist",
                     "isDisabled": false
@@ -355,13 +391,13 @@ const dataByLang = {
                     "id": "1770576912146",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "When the input field is empty, a placeholder text is displayed in the preview. It is visible only in the preview and is not included in the markup. Once you start typing, the placeholder disappears. A demonstration is shown below.",
+                    "value": "While an input field is empty, the preview shows placeholder text. It is only visible in the preview and is not included in the markup. As soon as you start typing, the placeholder disappears. There is an example below.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
                 },
                 {
-                    "id": "1770576925451",
+                    "id": "1770590708213",
                     "blockType": "inputBlock",
                     "type": "p",
                     "value": "",
@@ -382,7 +418,7 @@ const dataByLang = {
                     "id": "1770577107405",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "In the 'Preview' column, the 'Format' button removes extra spaces and line breaks from all text fields. Important: all line breaks will be removed except those in lists and code fragments.",
+                    "value": "In the “Preview” column, the “Format” button removes extra spaces and line breaks in all text fields. Important: all line breaks will be removed except lines in lists and fragments inside 'code'.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -400,7 +436,7 @@ const dataByLang = {
                     "id": "1770577296653",
                     "blockType": "inputBlock",
                     "type": "p",
-                    "value": "The site uses the browser's local storage to save data between sessions. When it is cleared, all saved data will be permanently deleted.",
+                    "value": "The site uses the browser’s local storage to save data between sessions. When you clear it, all saved data will be permanently deleted.",
                     "className": "steam__paragraph",
                     "tag": "p",
                     "isDisabled": false
@@ -409,7 +445,7 @@ const dataByLang = {
                     "id": "1770576028813",
                     "blockType": "inputBlock",
                     "type": "pullquote",
-                    "value": "Click 'Clear all' to delete this text and start working.",
+                    "value": "Click “Clear all” to remove this text and start working.",
                     "className": "steam__pullquote",
                     "tag": "pullquote",
                     "isDisabled": false
@@ -426,6 +462,7 @@ const dataByLang = {
             ]
         }
     }
+
 }
 
 export default dataByLang
