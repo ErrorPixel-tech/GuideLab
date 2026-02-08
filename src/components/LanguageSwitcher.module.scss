@@ -1,0 +1,21 @@
+.btnConteiner {
+    display: flex;
+    gap: 5px;
+    button {
+        padding: 10px 16px;
+        background: #0e4c8f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        opacity: 0.5;
+
+        &:hover {
+            background: #0056b3;
+        }
+
+    }
+
+
+}

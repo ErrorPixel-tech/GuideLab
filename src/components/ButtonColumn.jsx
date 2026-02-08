@@ -3,6 +3,7 @@ import { addInput } from '../features/blocks/blocks';
 import ButtonType from './ButtonType';
 import style from './ButtonColumn.module.scss';
 import { useTranslation } from "react-i18next";
+import LanguageSwitcher from './LanguageSwitcher';
 
 function ButtonColumn() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function ButtonColumn() {
     <div className={style.column}>
       <div className={style.header}>
         <h2>{t("buttons.header")}</h2>
+        <LanguageSwitcher></LanguageSwitcher>
       </div>
 
       <div className={style['container']}>

@@ -26,7 +26,7 @@ function PreviewColumn() {
     <div className="column">
       <div className="header">
         <h2>Превью</h2>
-        <button onClick={handleFormatClick}>Отформатировать</button>
+        <button onClick={handleFormatClick}>{t("preview.formatButtonTitle")}</button>
       </div>
       <div className={style["steam__board"]}>
         {inputs.map((input) => {
@@ -115,12 +115,12 @@ function PreviewColumn() {
           if (input.tag === "achivment-table") {
             return (
               <div key={input.id} className={style["steam__achivment-table"]}>
-                <div  >Значок</div>
-                <div  >Название</div>
-                <div   >Описание</div>
-                <div >Картинка</div>
-                <div >Название</div>
-                <div  >Описание</div>
+                <div>{t("preview.achivmentTable.header-1")}</div>
+                <div>{t("preview.achivmentTable.header-2")}</div>
+                <div>{t("preview.achivmentTable.header-3")}</div>
+                <div>{t("preview.achivmentTable.content-1")}</div>
+                <div>{t("preview.achivmentTable.content-2")}</div>
+                <div>{t("preview.achivmentTable.content-3")}</div>
               </div>
             )
           }
@@ -164,7 +164,7 @@ function PreviewColumn() {
             }
             const arr = input.value.split(/\r?\n/);
             return (
-              <ol  key={input.id} className={style[input.className]}>
+              <ol key={input.id} className={style[input.className]}>
                 {arr.map((str, index) => {
                   return <li key={index}>{str}</li>
                 })}
@@ -175,7 +175,7 @@ function PreviewColumn() {
 
             if (!input.value.trim()) {
               return (
-                <ul key={input.id}  className={style[input.className]}>
+                <ul key={input.id} className={style[input.className]}>
                   <li>• Lorem ipsum dolor sit amet.</li>
                   <li>• Lorem ipsum dolor sit amet.</li>
                   <li>• Lorem ipsum dolor sit amet.</li>

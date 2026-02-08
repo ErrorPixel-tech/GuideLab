@@ -1,6 +1,60 @@
 {
   "page": {
     "hello": "Hello, {{name}}!",
-    "changeLanguage": "Change language to Russian"
+    "changeLanguage": "Switch language to English"
+  },
+  "buttons": {
+    "header": "Buttons",
+    "buttons": {
+      "paragraph": "Paragraph",
+      "separator": "Separator",
+      "bulletedList": "Bulleted",
+      "numberedList": "Numbered",
+      "bulletedSteamList": "Steam bulleted",
+      "numberedSteamList": "Steam numbered",
+      "checkboxList": "Checkbox",
+      "imageFloatLeft": "Left",
+      "imageFloatRight": "Right",
+      "1-images": "1 Image",
+      "2-images": "2 Images",
+      "4-images": "4 Images",
+      "achivmentTable": "Table"
+    }
+  },
+  "inputs": {
+    "header": "Inputs",
+    "headerButtonTitle": "Remove all",
+    "removeAllButton": "Remove all?"
+  },
+  "markup": {
+    "floatLeft": "HalfWidthLeftAligned",
+    "floatRight": "HalfWidthRightAligned",
+    "wideImage": "FullWidthCentered",
+    "btnTitle1": "Copy",
+    "checkboxListTitle": "TO‑DO LIST:",
+    "btnTitle2": "Copied!",
+    "achivmentTable": {
+      "header-1": "Badge",
+      "header-2": "Title",
+      "header-3": "Description",
+      "content-1": "Icon",
+      "content-2": "Achievement",
+      "content-3": "There are non‑breaking spaces here to stretch the table!"
+    }
+  },
+  "preview": {
+    "formatButtonTitle": "Format",
+    "formatButtonSecondTitle": "Formatted!",
+    "formatButtonMsg": "Are you sure? This option will remove all extra spaces and all line breaks in blocks. Formatting will not affect text in [code] and in lists. You have been warned.",
+    "checkboxTitle": "TO‑DO LIST:",
+    "imageTitle": "Image",
+    "achivmentTable": {
+      "header-1": "Badge",
+      "header-2": "Title",
+      "header-3": "Description",
+      "content-1": "Icon",
+      "content-2": "Name",
+      "content-3": "Description"
+    }
   }
 }

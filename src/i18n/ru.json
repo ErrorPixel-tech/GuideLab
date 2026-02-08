@@ -1,53 +1,60 @@
 {
-  "page": {
-    "hello": "Привет, {{name}}!",
-    "changeLanguage": "Переключить язык на английский"
-  },
-  "buttons": {
-    "header": "Кнопки",
+    "page": {
+        "hello": "Привет, {{name}}!",
+        "changeLanguage": "Переключить язык на английский"
+    },
     "buttons": {
-        "paragraph": "Абзац",
-        "separator": "Разделитель",
-        "bulletedList": "Маркированный",
-        "numberedList": "Нумерованный",
-        "bulletedSteamList": "Маркированный Steam",
-        "numberedSteamList": "Нумерованный Steam",
-        "checkboxList": "Чекбокс",
-
-        "imageFloatLeft": "Слева",
-        "imageFloatRight": "Справа",
-        "1-images": "1 Картинка",
-        "2-images": "2 Картинки",
-        "4-images": "4 Картинки",
-        "achivmentTable": "Таблица"
+        "header": "Кнопки",
+        "buttons": {
+            "paragraph": "Абзац",
+            "separator": "Разделитель",
+            "bulletedList": "Маркированный",
+            "numberedList": "Нумерованный",
+            "bulletedSteamList": "Маркированный Steam",
+            "numberedSteamList": "Нумерованный Steam",
+            "checkboxList": "Чекбокс",
+            "imageFloatLeft": "Слева",
+            "imageFloatRight": "Справа",
+            "1-images": "1 Картинка",
+            "2-images": "2 Картинки",
+            "4-images": "4 Картинки",
+            "achivmentTable": "Таблица"
+        }
+    },
+    "inputs": {
+        "header": "Инпуты",
+        "headerButtonTitle": "Очистить всё",
+        "removeAllButton": "Удалить всё?"
+    },
+    "markup": {
+        "floatLeft": "ВполшириныПоЛевомуКраю",
+        "floatRight": "ВполшириныПоПравомуКраю",
+        "wideImage": "ВоВсюШиринуПоЦентру",
+        "checkboxListTitle": "СПИСОК ДЕЛ:",
+        "btnTitle1": "Скопировать",
+        "btnTitle2": "Скопировано!",
+        "achivmentTable": {
+            "header-1": "Значок",
+            "header-2": "Название",
+            "header-3": "Описание",
+            "content-1": "Иконка",
+            "content-2": "Ачивка",
+            "content-3": "Тут неразрывные пробелы, чтобы растянуть таблицу!"
+        }
+    },
+    "preview": {
+        "formatButtonTitle": "Отформатировать",
+        "formatButtonSecondTitle": "Отформатировано!",
+        "formatButtonMsg": "Вы уверены? Данная опция удалит все лишние пробелы и все переносы строк в блоках. Форматирование не затронет текст в [code] и в списках. Мы вас предупреждали.",
+        "checkboxTitle": "СПИСОК ДЕЛ:",
+        "imageTitle": "Картинка",
+        "achivmentTable": {
+            "header-1": "Значок",
+            "header-2": "Название",
+            "header-3": "Описание",
+            "content-1": "Иконка",
+            "content-2": "Ачивка",
+            "content-3": "Описание!"
+        }
     }
-  },
-  "inputs": {
-    "header": "Инпуты",
-    "removeAllButton": "Удалить всё?"
-  },
-
-  "markup": {
-    "floatLeft": "ВполшириныПоЛевомуКраю",
-    "floatRight": "ВполшириныПоПравомуКраю",
-    "wideImage": "ВоВсюШиринуПоЦентру",
-    "btnTitle1": "Скопировать",
-    "btnTitle2": "Скопировано!",
-    "achivmentTable": {
-        "header-1": "Значок",
-        "header-2": "Название",
-        "header-3": "Описание",
-        "content-1": "Иконка",
-        "content-2": "Ачивка",
-        "content-3": "Тут неразрывные пробелы, чтобы растянуть таблицу!"
-    }
-  },
-  "preview": {
-    "formatButtonTitle": "Отформатировать",
-    "formatButtonSecondTitle": "Отформатировано!",
-    "formatButtonMsg": "Вы уверены? Данная опция удалит все лишние пробелы и все переносы строк в блоках. Форматирование не затронет текст в [code] и в списках. Мы вас предупреждали.",
-    "checkboxTitle": "СПИСОК ДЕЛ:",
-    "imageTitle": "Картинка"
-
-  }
 }

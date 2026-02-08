@@ -90,7 +90,7 @@ function MarkupColumn() {
       }
       if (input.type === "checkbox") {
         let list = "";
-        list += '[table]\n[code]\n[b]СПИСОК ДЕЛ:[/b]\n';
+        list += `[table]\n[code]\n[b]${t("markup.checkboxListTitle")}[/b]\n`;
         list += "- [ ] ";
         const withMarks = input.value.replace(/\n/g, '\n- [ ] ');
         list += withMarks;
@@ -193,7 +193,7 @@ function MarkupColumn() {
     <div className="column">
       <div className="header">
         <h2>Разметка</h2>
-        <button onClick={handleCopyClick}>Скопировать</button>
+        <button onClick={handleCopyClick}>{t("markup.btnTitle1")}</button>
       </div>
       <div className='markup-list'>
         {createMarkUpCodeArray().map((el, index) => {
