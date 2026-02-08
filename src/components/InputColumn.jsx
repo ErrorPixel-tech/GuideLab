@@ -5,9 +5,11 @@ import { removeAllBlocks } from '../features/blocks/blocks';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import ListItemInput from './ListItemInput';
+import { useTranslation } from "react-i18next";
 
 function InputColumn() {
   const inputsRef = useRef([]);
+  const { t } = useTranslation();
 
   const handleKeyDown = (index) => (e) => {
     if (e.key === 'Enter' && e.shiftKey) {
@@ -28,7 +30,7 @@ function InputColumn() {
   // };
 
   const handleRemoveAll = () => {
-    if (confirm("УДАЛИТЬ ВСЁ?")) {
+    if (confirm(t("inputs.removeAllButton"))) {
       dispatch(removeAllBlocks());
     }
   };
@@ -37,7 +39,7 @@ function InputColumn() {
   return (
     <div className={style.column}>
       <div className={style.header}>
-        <h2>Инпуты</h2>
+        <h2>{t("inputs.header")}</h2>
         <button className={style.button} onClick={handleRemoveAll}>Очистить всё</button>
       </div>
 
