@@ -105,6 +105,13 @@ function MarkupColumn() {
         list += '\n[/code]\n';
         return list;
       }
+      if (input.type === "enter") {
+        let str = "";
+        for (let index = 0; index < input.enter; index++) {
+          str += "\n";
+        }
+        return str;
+      }
       if (input.tag === "u"
         || input.tag === "b"
         || input.tag === "i"

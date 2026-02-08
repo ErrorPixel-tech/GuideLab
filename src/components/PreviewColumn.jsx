@@ -100,6 +100,15 @@ function PreviewColumn() {
               </pre>
             )
           }
+          if (input.type === "enter") {
+            let str = "";
+            for (let index = 0; index < input.enter; index++) {
+              str += "\n";
+            }
+            return <pre className={input.className + " pre"}>
+              {str}
+            </pre>;
+          }
           if (input.tag === "achivment-table") {
             return (
               <div class="steam__achivment-table">
