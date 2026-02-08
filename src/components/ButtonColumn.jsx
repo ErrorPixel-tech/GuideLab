@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 function ButtonColumn() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  
+
   const handleAddInput = (payload) => {
     dispatch(addInput(payload));
   };
@@ -20,7 +20,7 @@ function ButtonColumn() {
   return (
     <div className={style.column}>
       <div className={style.header}>
-        <h2>Кнопки</h2>
+        <h2>{t("buttons.header")}</h2>
       </div>
 
       <div className={style['container']}>

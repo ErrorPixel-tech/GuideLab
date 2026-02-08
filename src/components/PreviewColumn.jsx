@@ -111,13 +111,13 @@ function PreviewColumn() {
           }
           if (input.tag === "achivment-table") {
             return (
-              <div class={style["steam__achivment-table"]}>
-                <div>Значок</div>
-                <div>Название</div>
-                <div>Описание</div>
-                <div>Картинка</div>
-                <div>Название</div>
-                <div>Описание</div>
+              <div key={input.id} className={style["steam__achivment-table"]}>
+                <div  >Значок</div>
+                <div  >Название</div>
+                <div   >Описание</div>
+                <div >Картинка</div>
+                <div >Название</div>
+                <div  >Описание</div>
               </div>
             )
           }

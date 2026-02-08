@@ -2,5 +2,8 @@
   "page": {
     "hello": "Привет, {{name}}!",
     "changeLanguage": "Переключить язык на английский"
+  },
+  "Buttons": {
+    "header": "Кнопки!!!"
   }
 }
