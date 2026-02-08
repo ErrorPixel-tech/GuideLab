@@ -1,4 +1,5 @@
 {
+  "tutorial": "",
   "page": {
     "hello": "Hello, {{name}}!",
     "changeLanguage": "Switch language to English"

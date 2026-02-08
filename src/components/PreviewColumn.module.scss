@@ -230,15 +230,15 @@ $img-bord: rgb(84, 91, 94);
     // & span {
     // display: flex;
     // }
-    padding: 3px;
+    // padding: 3px;
     background-clip: content-box;
-    margin: 1px 0;
-    margin-bottom: 16px;
+    margin: 16px 0;
+    // margin-bottom: 16px;
     background-color: $img-bg;
     color: $img-text;
     border-color: $img-bord;
-    padding: 3px;
-    border: 1px solid grey;
+    // padding: 3px;
+    // border: 1px solid grey;
     background-color: $img-bg;
     color: $img-text;
     border-color: $img-bord;

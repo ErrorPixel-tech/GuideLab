@@ -25,7 +25,7 @@ function MarkupColumn() {
       }
       let imageWideText = t("markup.wideImage");
       if (input.type === "screenshot") {
-        return `[p]\n[table]\n[tr]\n[td]\n${imageWideText}\n[/td]\n[/tr]\n[/table]\n[/p]\n`
+        return `[p]\n${imageWideText}\n[/p]\n`
       }
       if (input.type === "screenshot-horizontal") {
         return (`[p]\n[table]\n[tr]\n[td]\n${imageWideText}\n[/td]\n[td]\n${imageWideText}\n[/td]\n[/tr]\n[/table]\n[/p]\n`)
