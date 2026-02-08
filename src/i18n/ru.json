@@ -6,7 +6,20 @@
   "buttons": {
     "header": "Кнопки",
     "buttons": {
-        "text": "Абзац"
+        "paragraph": "Абзац",
+        "separator": "Разделитель",
+        "bulletedList": "Маркированный",
+        "numberedList": "Нумерованный",
+        "bulletedSteamList": "Маркированный Steam",
+        "numberedSteamList": "Нумерованный Steam",
+        "checkboxList": "Чекбокс",
+
+        "imageFloatLeft": "Слева",
+        "imageFloatRight": "Слева",
+        "1-images": "1 Картинка",
+        "2-images": "2 Картинки",
+        "4-images": "4 Картинки",
+        "achivmentTable": "Таблица"
     }
   }
 }

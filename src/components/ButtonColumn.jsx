@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { addInput } from '../features/blocks/blocks';
-// import { addList } from '../features/blocks/blocks';
 import ButtonType from './ButtonType';
 import style from './ButtonColumn.module.scss';
 import { useTranslation } from "react-i18next";
@@ -12,10 +11,6 @@ function ButtonColumn() {
   const handleAddInput = (payload) => {
     dispatch(addInput(payload));
   };
-
-  // const handleAddList = (payload) => {
-  //   dispatch(addList(payload));
-  // };
 
   return (
     <div className={style.column}>
@@ -37,8 +32,8 @@ function ButtonColumn() {
           {/* <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "enter", className: "steam__enter", tag: "", isDisabled: true, enter: "4" })}>Enter-4</ButtonType> */}
         </div>
         <div className={style['btns-block']}>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p", className: "steam__paragraph", tag: "p" })}>Text</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "enter", className: "steam__enter", tag: "", isDisabled: true, enter: "5" })}>Big space</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p", className: "steam__paragraph", tag: "p" })}>{t("buttons.buttons.paragraph")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "enter", className: "steam__enter", tag: "", isDisabled: true, enter: "5" })}>{t("buttons.buttons.separator")}</ButtonType>
         </div>
 
         {/* WORK
@@ -46,6 +41,7 @@ function ButtonColumn() {
         <ButtonType className={style['button']} onClick={() => handleAddList({ className: "steam__list" })}>[LIST]</ButtonType>
         </div> */}
 
+        {/* HEADERS */}
         <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--header']}`} onClick={() => handleAddInput({ type: "h1", className: "steam__header-1", tag: "h1" })}>[h1]</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--header']}`} onClick={() => handleAddInput({ type: "h2", className: "steam__header-2", tag: "h2" })}>[h2]</ButtonType>
@@ -54,18 +50,18 @@ function ButtonColumn() {
 
         {/*LISTS */}
         <div className={style['btns-block']}>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "slist", className: "steam__slist", tag: "slist" })}>markList</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "numlist", className: "steam__numlist", tag: "numlist" })}>numList</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "list", className: "steam__list", tag: "list" })}>Steam List</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "olist", className: "steam__olist", tag: "olist" })}>Steam oList</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "checkbox", className: "steam__checkbox", tag: "checkbox" })}>Checkbox</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "slist", className: "steam__slist", tag: "slist" })}>{t("buttons.buttons.bulletedList")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "numlist", className: "steam__numlist", tag: "numlist" })}>{t("buttons.buttons.numberedList")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "list", className: "steam__list", tag: "list" })}>{t("buttons.buttons.bulletedSteamList")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "olist", className: "steam__olist", tag: "olist" })}>{t("buttons.buttons.numberedSteamList")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "checkbox", className: "steam__checkbox", tag: "checkbox" })}>{t("buttons.buttons.checkboxList")}</ButtonType>
         </div>
 
         <div className={style['btns-block']}>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "bold", className: "steam__bold", tag: "b" })}>B</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "italic", className: "steam__italic", tag: "i" })}>I</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "underline", className: "steam__underline", tag: "u" })}>U</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "pullquote", className: "steam__pullquote", tag: "pullquote" })}>pQ</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "pullquote", className: "steam__pullquote", tag: "pullquote" })}>pullQ</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "strike", className: "steam__strike", tag: "strike" })}>Strike</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "spoiler", className: "steam__spoiler", tag: "spoiler" })}>Spoiler</ButtonType>
           <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "code", className: "steam__code", tag: "code" })}>[code]</ButtonType>
@@ -75,14 +71,14 @@ function ButtonColumn() {
 
         {/* КАРТИНКИ */}
         <div className={style['btns-block']}>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p-img", className: "steam__paragraph__image" })}>Слева</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p-img-r", className: "steam__paragraph__image--right" })}>Справа</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot", className: "steam__screenshot", tag: "", isDisabled: true })}>1 Картинка</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot-horizontal", className: "steam__screenshot-horizontal", tag: "", isDisabled: true })}>2 Картинки</ButtonType>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot-block", className: "steam__screenshot-block", tag: "", isDisabled: true })}>4 Картинки</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p-img", className: "steam__paragraph__image" })}>{t("buttons.buttons.imageFloatLeft")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "p-img-r", className: "steam__paragraph__image--right" })}>{t("buttons.buttons.imageFloatRight")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot", className: "steam__screenshot", tag: "", isDisabled: true })}>{t("buttons.buttons.1-images")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot-horizontal", className: "steam__screenshot-horizontal", tag: "", isDisabled: true })}>{t("buttons.buttons.2-images")}</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "screenshot-block", className: "steam__screenshot-block", tag: "", isDisabled: true })}>{t("buttons.buttons.4-images")}</ButtonType>
         </div>
 
-        <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "achivment-table", className: "steam__achivment-table", tag: "achivment-table", isDisabled: true })}>Таблица</ButtonType>
+        <ButtonType className={`${style['button']} ${style['button--text']}`} onClick={() => handleAddInput({ type: "achivment-table", className: "steam__achivment-table", tag: "achivment-table", isDisabled: true })}>{t("buttons.buttons.achivmentTable")}</ButtonType>
         {/* <div className={style['btns-block']}>
         </div> */}
 
@@ -91,7 +87,7 @@ function ButtonColumn() {
         </div> */}
 
         <div className={style['btns-block']}>
-          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "hr", className: "steam__separator", tag: "hr", isDisabled: true })}>Separator</ButtonType>
+          <ButtonType className={`${style['button']} ${style['button--something']}`} onClick={() => handleAddInput({ type: "hr", className: "steam__separator", tag: "hr", isDisabled: true })}>[hr][/hr]</ButtonType>
         </div>
       </div>
     </div >
