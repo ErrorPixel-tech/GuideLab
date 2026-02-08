@@ -103,7 +103,7 @@ function MarkupColumn() {
         list += "1. ";
         const withMarks = input.value.replace(/\n/g, `\n${i++}. `);
         list += withMarks;
-        list += '\n[/code]\n';
+        list += '\n[/p]\n';
         return list;
       }
       if (input.type === "enter") {
