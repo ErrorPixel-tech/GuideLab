@@ -14,7 +14,7 @@ function ButtonColumn() {
   };
 
   return (
-    <div className={style.column}>
+    <div id="buttonColumn" className={style.column}>
       <div className={style.header}>
         <h2>{t("buttons.header")}</h2>
         <LanguageSwitcher></LanguageSwitcher>

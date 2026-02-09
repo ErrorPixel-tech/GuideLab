@@ -132,6 +132,19 @@ body {
     flex-direction: column;
   }
 
+  #buttonColumn {
+    order: 1;
+  }
+  #inputColumn {
+    order: 3;
+  }
+  #markupColumn {
+    order: 4;
+  }
+  #previewColumn {
+    order: 2;
+  }
+
   .help-button {
     // display: none;
     position: absolute;

@@ -190,7 +190,7 @@ function MarkupColumn() {
   }
 
   return (
-    <div className="column">
+    <div id="markupColumn" className="column">
       <div className="header">
         <h2>{t("markup.header")}</h2>
         <button onClick={handleCopyClick}>{t("markup.btnTitle1")}</button>

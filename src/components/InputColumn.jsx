@@ -37,7 +37,7 @@ function InputColumn() {
 
 
   return (
-    <div className={style.column}>
+    <div id="inputColumn" className={style.column}>
       <div className={style.header}>
         <h2>{t("inputs.header")}</h2>
         <button className={style.button} onClick={handleRemoveAll}>{t("inputs.headerButtonTitle")}</button>
