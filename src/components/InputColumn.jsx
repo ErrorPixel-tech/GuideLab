@@ -68,35 +68,36 @@ function InputColumn() {
           if (block.type === "screenshot") {
             return (
               <div key={block.id}>
-                {block.type}{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[СКРИНШОТ]"} />
+                <div>{block.type}</div>{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[СКРИНШОТ]"} />
               </div>
             );
           }
           if (block.type === "screenshot-horizontal") {
             return (
               <div key={block.id}>
-                {block.type}{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ГАЛЕРЕЯ 2 КАРТИНКИ]"} />
+                <div>{block.type}</div>{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ГАЛЕРЕЯ 2 КАРТИНКИ]"} />
               </div>
             );
           }
           if (block.type === "screenshot-block") {
             return (
               <div key={block.id}>
-                {block.type}{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ГАЛЕРЕЯ 4 КАРТИНКИ]"} />
+                <div>{block.type}</div>{block.tag}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ГАЛЕРЕЯ 4 КАРТИНКИ]"} />
               </div>
             );
           }
           if (block.type === "achivment-table") {
             return (
               <div key={block.id}>
-                {block.type}<TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ТАБЛИЦА]"} />
+                <div>{block.type}</div>
+                <TextInput isDisabled={block.isDisabled} index={index} id={block.id} value={"[ТАБЛИЦА]"} />
               </div>
             );
           }
           if (block.isDisabled) {
             return (
               <div key={block.id}>
-                {block.type}<TextInput
+                <div>{block.type}</div><TextInput
                   index={index}
                   isDisabled={block.isDisabled}
                   ref={(el) => (inputsRef.current[block.id] = el)}
@@ -108,7 +109,7 @@ function InputColumn() {
           }
           return (
             <div key={block.id}>
-              {block.type}<TextInput
+              <div>{block.type}</div><TextInput
                 index={index}
                 isDisabled={block.isDisabled}
                 ref={(el) => (inputsRef.current[block.id] = el)}
