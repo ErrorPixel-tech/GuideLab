@@ -89,7 +89,7 @@ ${h}
 [/code]
 [/table]
 `,g}if(f.type==="numlist"){let g=2,p="";p+=`[p]
-`,p+="1. ";const y=f.value.replace(/\n/g,`
+`,p+="1. ";const y=f.value.replace(/\n/g,()=>`
 ${g++}. `);return p+=y,p+=`
 [/p]
 `,p}if(f.type==="enter"){let g="";for(let p=0;p<f.enter;p++)g+=`
