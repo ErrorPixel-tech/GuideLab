@@ -169,7 +169,13 @@
 
 // Мобила (примерно до 768px)
 @media (max-width: 768px) {
+    .container {
+        display: block;
+    }
   .input {
     min-width: 100%;
-  }
+    resize: vertical;
+    width: 100%;
+}
+
 }
